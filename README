@@ -1,0 +1,21 @@
+
+cPanel, Inc. provides this skeleton style to help you to develop custom styles that modify the appearance of the cPanel interface. For example, you may wish to create a customized appearance to match your company's branding and logo, or you may wish to create customized styles for distribution.
+https://documentation.cpanel.net/display/DD/Guide+to+cPanel+Interface+Customization+-+cPanel+Style+Development
+For more information about cPanel style creation, visit http://go.cpanel.net/Style
+For a step-by-step tutorial about how to create and apply a custom style, visit http://go.cpanel.net/StyleTutorial
+
+We strongly recommend that you do not attempt to modify the existing cPanel default style. Updates to cPanel & WHM may overwrite your changes. To modify any aspect of the cPanel interface's appearance, you must create a new style. 
+
+Style development workflow:
+When you create a cPanel style with this skeleton style, we recommend that you use the following workflow:
+1. Update the styles.css file to contain the desired CSS alterations.
+2. Add the desired images and other assets. 
+  - Store custom icons in the icons directory with the same filename and extension as the icon that you wish to replace. For a list of icon filenames, visit http://go.cpanel.net/appkey
+  - Store the style's 500x500 preview image as the preview.png file within the style's directory.
+  - Store sprites and associated CSS files in the sprites directory.
+3. Use WHM's Customization interface (Home >> cPanel >> Customization) to upload the style, or move the style's directory to the appropriate location on the server:
+For all of the accounts on the server — /var/cpanel/customizations/styled/mystyle/
+For all of the cPanel accounts that a reseller owns — /home/reseller/var/cpanel/reseller/styled/mystyle/
+For a specific cPanel account — /home/username/var/cpanel/styled/mystyle/
+If these directories do not currently exist on the server, use the mkdir command to create them.
+4. Apply the style to the desired accounts.
